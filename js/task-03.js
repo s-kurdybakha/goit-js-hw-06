@@ -18,7 +18,7 @@ const galleryEl = document.querySelector('.gallery');
 console.log(galleryEl);
 
 for (let i = 0; i < images.length; i += 1) {
-  galleryEl.insertAdjacentHTML("beforebegin", `<li class="galleryList"><img class="galleryImg" src= "${images[i].url}" alt="${images[i]}"></img></li>`)
+  galleryEl.insertAdjacentHTML("afterbegin", `<li class="galleryList"><img class="galleryImg" src= "${images[i].url}" alt="${images[i]}"></img></li>`)
 };
 
 
