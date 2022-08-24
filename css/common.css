@@ -23,6 +23,9 @@ button {
   cursor: pointer;
 }
 
+.gallery {
+  list-style: none;
+}
 
 .galleryList {
   list-style: none;

@@ -17,9 +17,15 @@ const images = [
 const galleryEl = document.querySelector('.gallery');
 console.log(galleryEl);
 
-for (let i = 0; i < images.length; i += 1) {
-  galleryEl.insertAdjacentHTML("afterbegin", `<li class="galleryList"><img class="galleryImg" src= "${images[i].url}" alt="${images[i]}"></img></li>`)
-};
+const markup = images
+	.map(image => `<li><img class="picture" src=${image.url} width = '500' alt='${image.alt}'></img></li>`)
+  .join('')
+
+  galleryEl.insertAdjacentHTML('beforeend', markup)
+
+// for (let i = 0; i < images.length; i += 1) {
+//   galleryEl.insertAdjacentHTML("afterbegin", `<li class="galleryList"><img class="galleryImg" src= "${images[i].url}" alt="${images[i]}"></img></li>`)
+// };
 
 
 
