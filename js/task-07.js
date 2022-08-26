@@ -2,9 +2,11 @@
 const fontSizeControl = document.querySelector('#font-size-control');
 const currentText = document.querySelector('#text');
 
-currentText.setAttribute('style', `${fontSizeControl.value}`);
+currentText.setAttribute('style', `${fontSizeControl.value}px`);
 
 fontSizeControl.addEventListener('input', onInputControl);
+
+text.style.fontSize = '56px';
 
 function onInputControl() {
     currentText.style.fontSize = `${fontSizeControl.value}px`;

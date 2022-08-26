@@ -9,14 +9,17 @@ const ingredients = [
 
 const ingredientList = document.querySelector('#ingredients');
 
+let newArray = [];
 
 for (const el of ingredients) {
   const ingredientEL = document.createElement('li');
  
   ingredientEL.setAttribute('class', 'item');
   ingredientEL.textContent = el;
-  ingredientList.append(ingredientEL);
+  newArray.push(ingredientEL); 
 }
+ingredientList.append(...newArray);
+
 
 console.log(ingredientList);
 
